@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    overflow: break-word;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+:root {
+    --color-letters: #242424;
+    --color-back: #dfdfdf;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section.module p {
+    margin-bottom: 40px;
+}
+
+section.module:last-child {  /* Atinge somente o último objeto */
+    margin-bottom: 0;
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-weight: 5%;
+}
+
+section.module.content {
+    padding: 40px 0;
+    background: var(--color-back);
+}
+
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh !important;  /* Forçar a ter 100vh de acordo com o tamanho da tela */
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* Quem de fato ativa o parallax */
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+section.module.parallax:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
+    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
+}
+
+section.module.parallax-1 {
+    background-image: url("https://images.unsplash.com/photo-1676107779594-7a23bd99e07c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+section.module.parallax-2 {
+background-image: url("https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1452&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+  
+section.module.parallax-3 {
+background-image: url("https://images.unsplash.com/photo-1494597564530-871f2b93ac55?q=80&w=1413&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+section.module.parallax h1 {
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    z-index: 50;
+}
+
+/*/////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 750px){
+    section.module.parallax {
+        height: 50vh !important;  /* Forçar a ter 100vh de acordo com o tamanho da tela */
+    }
+    section.module p {
+        margin-right: 8.5%;
+    }
+}
