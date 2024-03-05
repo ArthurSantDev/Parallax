@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0 0;
+    padding: 0 0;
     word-wrap: break-word;
     overflow: break-word;
     font-family: 'Montserrat', 'sans-serif';
@@ -23,29 +23,7 @@ html {
     --color-transparent: #ffffff00;
 }
 
-.name {
-    color: var(--color-white);
-    font-weight: 600;
-    font-size: 25px;
-    padding: 20px;
-    text-decoration: none;
-    cursor: pointer;
-    transition-duration: 0.7s;
-    z-index: 2;    
-}
-
-.name:hover {
-    color: var(--color-3);
-    font-weight: 600;
-    font-size: 25px;
-    padding: 20px;
-    text-decoration: none;
-    cursor: pointer;
-    transition-property: color;
-    transition-duration: 0.6s;
-}
-
-.wrapper {
+.wrapper {  /* Imgs */
     width: 100%;
     margin: 0 auto;
 }
@@ -134,10 +112,16 @@ section.module.parallax h1 {
 
 @media screen and (max-width: 750px){
 
+    .container {
+        width: 90%;
+        text-align: center;
+    }
+
     section.module.parallax {
         height: 55vh !important;  /* Forçar a ter 100vh de acordo com o tamanho da tela */
     }
+
     section.module p {
-        margin-right: 8%;
+        margin-right: 0%;
     }
 }
