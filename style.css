@@ -6,9 +6,43 @@
     font-family: 'Montserrat', 'sans-serif';
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --color-letters: #242424;
     --color-back: #dfdfdf;
+    --color-0: #e0e0e0;
+    --color-1: #c0c0c0;
+    --color-2: #8A8A8A;
+    --color-3: #858585;
+    --color-4: #747474;
+    --color-white: #FFFFFF;
+    --color-shadow: #6e6e6e63;
+    --color-transparent: #ffffff00;
+}
+
+.name {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 25px;
+    padding: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.7s;
+    z-index: 2;    
+}
+
+.name:hover {
+    color: var(--color-3);
+    font-weight: 600;
+    font-size: 25px;
+    padding: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition-property: color;
+    transition-duration: 0.6s;
 }
 
 .wrapper {
@@ -16,9 +50,10 @@
     margin: 0 auto;
 }
 
-main {
+main {  /* Testo que fica acima das imagens */
     display: block;
     background-color: #fff;
+    user-select: none;
 }
 
 .container {
@@ -39,6 +74,7 @@ section.module:last-child {  /* Atinge somente o último objeto */
 section.module h2 {
     margin-bottom: 40px;
     font-weight: 5%;
+    z-index: 1;
 }
 
 section.module.content {
@@ -68,14 +104,14 @@ section.module.parallax:after {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 8;
+    z-index: 1;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
     background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
     background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
 }
 
 section.module.parallax-1 {
-    background-image: url("https://images.unsplash.com/photo-1676107779594-7a23bd99e07c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1534258936925-c58bed479fcb?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 section.module.parallax-2 {
@@ -97,10 +133,11 @@ section.module.parallax h1 {
 /*/////////////////////////////////////////////////////////*/
 
 @media screen and (max-width: 750px){
+
     section.module.parallax {
-        height: 50vh !important;  /* Forçar a ter 100vh de acordo com o tamanho da tela */
+        height: 55vh !important;  /* Forçar a ter 100vh de acordo com o tamanho da tela */
     }
     section.module p {
-        margin-right: 8.5%;
+        margin-right: 8%;
     }
 }
