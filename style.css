@@ -12,55 +12,91 @@ html {
 
 :root {
     --color-letters: #242424;
+    --color-header: #242424;
+    --color-white: #FFFFFF;
     --color-back: #dfdfdf;
     --color-0: #e0e0e0;
     --color-1: #c0c0c0;
     --color-2: #8A8A8A;
     --color-3: #858585;
     --color-4: #747474;
-    --color-white: #FFFFFF;
-    --color-shadow: #6e6e6e63;
-    --color-transparent: #ffffff00;
 }
 
-.wrapper {  /* Imgs */
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: var(--color-header);
+    backdrop-filter: blur(3px);
+    position: fixed;
+    width: 100%;
+    z-index: 100;    
+}
+
+header a {
+    text-decoration: none;
+    color: var(--color-back);
+    font-size: 140%;
+}
+
+.wrapper {
     width: 100%;
     margin: 0 auto;
 }
 
 main {  /* Testo que fica acima das imagens */
     display: block;
-    background-color: #fff;
+    background-color: var(--color-white);
     user-select: none;
 }
 
 .container {
     width: 100%;
-    max-width: 700px;
+    max-width: 50%;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-section.module p {
-    margin-bottom: 40px;
+    padding: 0 5%;
 }
 
 section.module:last-child {  /* Atinge somente o último objeto */
     margin-bottom: 0;
 }
 
-section.module h2 {
-    margin-bottom: 40px;
+section.module h1 {
+    margin-bottom: 0;
     font-weight: 5%;
     z-index: 1;
 }
 
-section.module.content {
-    padding: 40px 0;
+section.module.parallax h1 {
+    color: var(--color-white);
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    z-index: 50;
+}
+
+section.module h2 {
+    margin-bottom: 5%;
+    font-weight: 5%;
+    z-index: 1;
+}
+
+section.module p {
+    margin-bottom: 5%;
+}
+
+section.module.content {  /* Onde fica o texto */
+    padding: 6% 0;
     background: var(--color-back);
 }
 
-section.module.parallax {
+section.module.parallax {  /* Img que fica fixa */
+    background-attachment: fixed;  /* Quem de fato ativa o parallax */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,11 +106,8 @@ section.module.parallax {
     overflow: hidden;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-attachment: fixed;  /* Quem de fato ativa o parallax */
     background-size: cover;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
 }
 
 section.module.parallax:after {
@@ -85,7 +118,6 @@ section.module.parallax:after {
     z-index: 1;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
     background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
-    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
 }
 
 section.module.parallax-1 {
@@ -93,35 +125,61 @@ section.module.parallax-1 {
 }
 
 section.module.parallax-2 {
-background-image: url("https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1452&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+background-image: url("https://images.unsplash.com/photo-1592967547589-e94f6cd77af9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
   
 section.module.parallax-3 {
-background-image: url("https://images.unsplash.com/photo-1494597564530-871f2b93ac55?q=80&w=1413&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+background-image: url("https://images.unsplash.com/photo-1587996428538-71d66749a5cb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
-section.module.parallax h1 {
-    color: white;
-    text-align: center;
-    font-size: 70px;
-    text-transform: uppercase;
-    z-index: 50;
+
+
+
+
+footer {
+    background-color: #242424;
 }
 
-/*/////////////////////////////////////////////////////////*/
+.footer-container {
+    width: 100%;
+    padding: 2% 0% 2% 0%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.social-icons a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 2em;
+    color: var(--color-back);
+}
+
+
+
+
+
+/*////////////////////////////////////////////////////*/
 
 @media screen and (max-width: 750px){
 
     .container {
         width: 90%;
-        text-align: center;
+        max-width: 100%;
+        text-align: left;
+        margin-left: 2%;
+        margin-right: -2%;
     }
 
-    section.module.parallax {
-        height: 55vh !important;  /* Forçar a ter 100vh de acordo com o tamanho da tela */
+    section.module.parallax {   /* Img que fica fixa */
+        height: 55vh !important;    /* Forçar a ter 100vh de acordo com o tamanho da tela */
     }
 
-    section.module p {
-        margin-right: 0%;
+    section.module.parallax:after {
+        width: 0%;
+        height: 0%;
     }
 }
