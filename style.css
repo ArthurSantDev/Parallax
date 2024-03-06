@@ -44,6 +44,10 @@ header a {
     font-size: 140%;
 }
 
+
+
+
+
 .wrapper {
     width: 100%;
     margin: 0 auto;
@@ -55,21 +59,23 @@ main {  /* Testo que fica acima das imagens */
     user-select: none;
 }
 
-.container {
+.container {  /* text */
     width: 100%;
     max-width: 50%;
-    margin: 0 auto;
-    padding: 0 5%;
-}
-
-section.module:last-child {  /* Atinge somente o último objeto */
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: 5%;
+    padding-right: -5%;
 }
 
 section.module h1 {
     margin-bottom: 0;
     font-weight: 5%;
     z-index: 1;
+}
+
+section.module:last-child {  /* Atinge somente o último objeto */
+    margin-bottom: 0;
 }
 
 section.module.parallax h1 {
@@ -96,7 +102,7 @@ section.module.content {  /* Onde fica o texto */
 }
 
 section.module.parallax {  /* Img que fica fixa */
-    background-attachment: fixed;  /* Quem de fato ativa o parallax */
+    background-attachment: fixed !important;  /* Quem de fato ativa o parallax */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,7 +126,7 @@ section.module.parallax:after {
     background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
 }
 
-section.module.parallax-1 {
+section.module.parallax-1 {  /* Link para imagem d fundo */
     background-image: url("https://images.unsplash.com/photo-1534258936925-c58bed479fcb?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
@@ -166,6 +172,11 @@ footer {
 
 @media screen and (max-width: 750px){
 
+    header {
+        margin-left: -1%;
+        margin-right: 1%
+    }
+
     .container {
         width: 90%;
         max-width: 100%;
@@ -182,4 +193,8 @@ footer {
         width: 0%;
         height: 0%;
     }
+    
+    section.module.parallax {  /* Img que fica fixa */
+        background-attachment: fixed !important;
+    } 
 }
