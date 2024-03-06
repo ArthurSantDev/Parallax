@@ -11,10 +11,9 @@ html {
 }
 
 :root {
-    --color-letters: #242424;
-    --color-header: #242424;
-    --color-white: #FFFFFF;
-    --color-back: #dfdfdf;
+    --color-dark: #242424;    
+    --color-light: #dfdfdf;
+    --color-white: #fff;
     --color-0: #e0e0e0;
     --color-1: #c0c0c0;
     --color-2: #8A8A8A;
@@ -28,11 +27,10 @@ html {
 
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 1%;
     padding-bottom: 1%;
-    background-color: var(--color-header);
-    backdrop-filter: blur(3px);
+    background-color: var(--color-dark);
     position: fixed;
     width: 100%;
     z-index: 100;    
@@ -40,8 +38,10 @@ header {
 
 header a {
     text-decoration: none;
-    color: var(--color-back);
-    font-size: 140%;
+    color: var(--color-white);
+    font-size: 130%;
+    margin-left: 7%;
+    margin-right: 5%;
 }
 
 
@@ -98,7 +98,7 @@ section.module p {
 
 section.module.content {  /* Onde fica o texto */
     padding: 6% 0;
-    background: var(--color-back);
+    background: var(--color-light);
 }
 
 section.module.parallax {  /* Img que fica fixa */
@@ -131,24 +131,26 @@ section.module.parallax-1 {  /* Link para imagem d fundo */
 }
 
 section.module.parallax-2 {
+background-image: url("https://images.unsplash.com/photo-1587996428538-71d66749a5cb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+section.module.parallax-3 {
 background-image: url("https://images.unsplash.com/photo-1592967547589-e94f6cd77af9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
   
-section.module.parallax-3 {
-background-image: url("https://images.unsplash.com/photo-1587996428538-71d66749a5cb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-}
+
 
 
 
 
 
 footer {
-    background-color: #242424;
+    background-color: var(--color-dark);
 }
 
 .footer-container {
     width: 100%;
-    padding: 2% 0% 2% 0%;
+    padding: 2% 0% 1% 0%;
 }
 
 .social-icons {
@@ -161,8 +163,40 @@ footer {
     text-decoration: none;
     padding: 10px;
     font-size: 2em;
-    color: var(--color-back);
+    color: var(--color-light);
+    margin-bottom: 0.3%;
 }
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-light);
+    font-size: 70%;
+}
+
+.arthursant{
+    margin: 0 0.5%;
+    font-size: 130%;
+    color: var(--color-light);
+    text-decoration: none;
+    font-family: none;
+    cursor: pointer;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 8.5px;
+    background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-light);
+    border-radius: 3px;
+}
+
 
 
 
@@ -171,6 +205,17 @@ footer {
 /*////////////////////////////////////////////////////*/
 
 @media screen and (max-width: 750px){
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        background-color: var(--color-dark);
+        position: fixed;
+        width: 100%;
+        z-index: 100;    
+    }
 
     .container {
         width: 90%;
