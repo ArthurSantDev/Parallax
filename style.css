@@ -172,11 +172,6 @@ footer {
 
 @media screen and (max-width: 750px){
 
-    header {
-        margin-left: -1%;
-        margin-right: 1%
-    }
-
     .container {
         width: 90%;
         max-width: 100%;
@@ -195,6 +190,6 @@ footer {
     }
     
     section.module.parallax {  /* Img que fica fixa */
-        background-attachment: fixed !important;
+        background-attachment: local !important;
     } 
 }
