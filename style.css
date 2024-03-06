@@ -27,24 +27,20 @@ html {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 1%;
     padding-bottom: 1%;
     background-color: var(--color-dark);
     position: fixed;
     width: 100%;
-    z-index: 100;    
+    z-index: 100;
 }
 
 header a {
     text-decoration: none;
     color: var(--color-white);
     font-size: 130%;
-    margin-left: 7%;
-    margin-right: 5%;
 }
-
-
 
 
 
@@ -140,10 +136,6 @@ background-image: url("https://images.unsplash.com/photo-1592967547589-e94f6cd77
   
 
 
-
-
-
-
 footer {
     background-color: var(--color-dark);
 }
@@ -186,7 +178,6 @@ footer p {
 
 
 
-
 ::-webkit-scrollbar {
     width: 8.5px;
     background-color: none;
@@ -215,6 +206,10 @@ footer p {
         position: fixed;
         width: 100%;
         z-index: 100;    
+    }
+
+    header a {
+        font-size: 90%;
     }
 
     .container {
