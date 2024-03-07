@@ -31,7 +31,7 @@ header {
 
 header a {
     display: inline;
-    font-size: 160%;
+    font-size: 120%;
     margin-left: 20px;
     text-decoration: none;
     color: var(--color-white);
@@ -39,7 +39,7 @@ header a {
 }
 
 .logo {
-    font-size: 220%;
+    font-size: 160%;
     margin-left: 0;
 }
 
@@ -93,13 +93,13 @@ section.module.parallax h1 {  /* Titulo */
 section.module h2 {
     margin-bottom: 5%;
     font-weight: 5%;
-    font-size: 50px;
+    font-size: 30px;
     z-index: 1;
 }
 
 section.module p {
     margin-bottom: 5%;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 section.module.content {  /* Onde fica o texto */
@@ -167,7 +167,7 @@ footer {
 .social-icons a {
     text-decoration: none;
     padding: 10px;
-    font-size: 3em;
+    font-size: 2em;
     color: var(--color-light);
     margin-bottom: 0.3%;
 }
