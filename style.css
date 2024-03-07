@@ -14,22 +14,15 @@ html {
     --color-dark: #242424;    
     --color-light: #dfdfdf;
     --color-white: #fff;
-    --color-0: #e0e0e0;
-    --color-1: #c0c0c0;
-    --color-2: #8A8A8A;
-    --color-3: #858585;
-    --color-4: #747474;
 }
-
-
-
 
 
 header {
     display: flex;
     justify-content: space-around;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    align-items: center;
+    gap: 30%;
+    height: 8vh;
     background-color: var(--color-dark);
     position: fixed;
     width: 100%;
@@ -37,11 +30,16 @@ header {
 }
 
 header a {
+    display: inline;
+    margin-left: 20px;
     text-decoration: none;
     color: var(--color-white);
-    font-size: 130%;
+    font-size: 120%;
 }
 
+.logo {
+    font-size: 160%;
+}
 
 
 .wrapper {
@@ -60,8 +58,15 @@ main {  /* Testo que fica acima das imagens */
     max-width: 50%;
     margin: 0;
     padding: 0;
-    padding-left: 5%;
-    padding-right: -5%;
+}
+
+section.module.content {
+    display: flex;
+    justify-content: center;
+}
+
+section.module.content h2{
+    text-align: center;
 }
 
 section.module h1 {
@@ -123,7 +128,7 @@ section.module.parallax:after {
 }
 
 section.module.parallax-1 {  /* Link para imagem d fundo */
-    background-image: url("https://images.unsplash.com/photo-1534258936925-c58bed479fcb?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1526718583451-e88ebf774771?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 section.module.parallax-2 {
@@ -134,6 +139,9 @@ section.module.parallax-3 {
 background-image: url("https://images.unsplash.com/photo-1592967547589-e94f6cd77af9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
   
+section.module.parallax-4 {
+background-image: url("https://images.unsplash.com/photo-1655998233171-ee5b130acba5?q=80&w=1398&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
 
 
 footer {
@@ -180,29 +188,22 @@ footer p {
 
 ::-webkit-scrollbar {
     width: 8.5px;
-    background-color: none;
+    background-color: var(--color-light);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color-light);
+    background-color: var(--color-white);
     border-radius: 3px;
 }
 
-
-
-
-
-
 /*////////////////////////////////////////////////////*/
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 900px){
 
     header {
         display: flex;
         justify-content: space-around;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        background-color: var(--color-dark);
+        gap: 0%;
         position: fixed;
         width: 100%;
         z-index: 100;    
@@ -216,8 +217,6 @@ footer p {
         width: 90%;
         max-width: 100%;
         text-align: left;
-        margin-left: 2%;
-        margin-right: -2%;
     }
 
     section.module.parallax {   /* Img que fica fixa */
