@@ -31,14 +31,16 @@ header {
 
 header a {
     display: inline;
+    font-size: 160%;
     margin-left: 20px;
     text-decoration: none;
     color: var(--color-white);
-    font-size: 120%;
+    text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
 }
 
 .logo {
-    font-size: 160%;
+    font-size: 220%;
+    margin-left: 0;
 }
 
 
@@ -79,8 +81,9 @@ section.module:last-child {  /* Atinge somente o último objeto */
     margin-bottom: 0;
 }
 
-section.module.parallax h1 {
+section.module.parallax h1 {  /* Titulo */
     color: var(--color-white);
+    text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
     font-size: 70px;
     text-transform: uppercase;
@@ -90,11 +93,13 @@ section.module.parallax h1 {
 section.module h2 {
     margin-bottom: 5%;
     font-weight: 5%;
+    font-size: 50px;
     z-index: 1;
 }
 
 section.module p {
     margin-bottom: 5%;
+    font-size: 25px;
 }
 
 section.module.content {  /* Onde fica o texto */
@@ -132,7 +137,7 @@ section.module.parallax-1 {  /* Link para imagem d fundo */
 }
 
 section.module.parallax-2 {
-background-image: url("https://images.unsplash.com/photo-1587996428538-71d66749a5cb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+background-image: url("https://images.unsplash.com/photo-1587996597484-04743eeb56b4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 section.module.parallax-3 {
@@ -140,7 +145,7 @@ background-image: url("https://images.unsplash.com/photo-1592967547589-e94f6cd77
 }
   
 section.module.parallax-4 {
-background-image: url("https://images.unsplash.com/photo-1655998233171-ee5b130acba5?q=80&w=1398&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+background-image: url("https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1452&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 
@@ -162,7 +167,7 @@ footer {
 .social-icons a {
     text-decoration: none;
     padding: 10px;
-    font-size: 2em;
+    font-size: 3em;
     color: var(--color-light);
     margin-bottom: 0.3%;
 }
@@ -172,19 +177,17 @@ footer p {
     justify-content: center;
     align-items: center;
     color: var(--color-light);
-    font-size: 70%;
+    font-size: 100%;
 }
 
 .arthursant{
     margin: 0 0.5%;
-    font-size: 130%;
+    font-size: 150%;
     color: var(--color-light);
     text-decoration: none;
     font-family: none;
     cursor: pointer;
 }
-
-
 
 ::-webkit-scrollbar {
     width: 8.5px;
@@ -204,13 +207,21 @@ footer p {
         display: flex;
         justify-content: space-around;
         gap: 0%;
-        position: fixed;
-        width: 100%;
-        z-index: 100;    
+        font-size: 90%;
+    }
+
+    header a, 
+    .logo{
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     header a {
-        font-size: 90%;
+        font-size: 120%;
+    }
+    
+    .logo {
+        font-size: 180%;
     }
 
     .container {
@@ -219,8 +230,22 @@ footer p {
         text-align: left;
     }
 
+    section.module.parallax h1 {  /* Titulo */
+        font-size: 60px;
+        z-index: 50;
+    }
+    
+    section.module h2 {
+        font-size: 30px;
+    }
+    
+    section.module p {
+        margin-bottom: 5%;
+        font-size: 15px;
+    }
+
     section.module.parallax {   /* Img que fica fixa */
-        height: 55vh !important;    /* Forçar a ter 100vh de acordo com o tamanho da tela */
+        height: 50vh !important;    /* Forçar a ter 100vh de acordo com o tamanho da tela */
     }
 
     section.module.parallax:after {
@@ -231,4 +256,24 @@ footer p {
     section.module.parallax {  /* Img que fica fixa */
         background-attachment: local !important;
     } 
+
+    footer {
+        background-color: var(--color-dark);
+    }
+    
+    .footer-container {
+        padding: 2% 0% 2% 0%;
+    }
+    
+    .social-icons a {
+        font-size: 2em;
+    }
+    
+    footer p {
+        font-size: 70%;
+    }
+    
+    .arthursant{
+        font-size: 130%;
+    }
 }
