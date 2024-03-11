@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 30%;
+    gap: 30%; /* Entre o logo e os atalhos */
     height: 8vh;
     background-color: var(--color-dark);
     position: fixed;
@@ -63,7 +63,7 @@ main {  /* Testo que fica acima das imagens */
     padding: 0;
 }
 
-section.module.content {
+section.text-content { /* fundo e conteúdo */
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -71,11 +71,7 @@ section.module.content {
     background: var(--color-light);
 }
 
-section.module:last-child {  /* Atinge somente o último objeto */
-    margin-bottom: 0;
-}
-
-section.module h2 {
+section.text-content h2 {
     text-align: center;
     margin-bottom: 5%;
     font-weight: 5%;
@@ -83,9 +79,13 @@ section.module h2 {
     z-index: 1;
 }
 
-section.module p {
+section.text-content p {
     margin-bottom: 5%;
     font-size: 15px;
+}
+
+section.text-content:last-child {  /* Fondo onde o texto fica */
+    margin-bottom: 0;
 }
 
 section.module.parallax h1 {  /* Titulo */
@@ -122,7 +122,8 @@ section.module.parallax:after {
     background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
 }
 
-section.module.parallax-1 {  /* Link para imagem d fundo */
+/* Link para imagem d fundo */
+section.module.parallax-1 {  
     background-image: url("https://images.unsplash.com/photo-1620064854775-93e5394ecdd5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
@@ -140,23 +141,19 @@ background-image: url("https://images.unsplash.com/photo-1552196563-55cd4e45efb3
 
 /* BTN STYLE /////////////////////////////////////////////*/
 
-a {     /* Custum links */
+a {  /* Custum links */
     color: var(--color-text);
     text-decoration: none;
 }
 
-button {
-    background-color: white;
+button { /* Tamanho e posição dos btn */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 80%;
 }
 
-section.btn-links {  /* BTN longos */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-a.link button {  /* BTN longos */
-    width: 100%;
+button {  /* BTN longos */
     padding: 13px 20px;
     display: flex;
     align-items: center;
@@ -165,6 +162,7 @@ a.link button {  /* BTN longos */
     border-radius: 12px;
     cursor: pointer;
     color: var(--color-text);
+    background-color: white;
 }
 
 a.link b {  /* Text */
@@ -176,6 +174,11 @@ a.link i {  /* Icons */
     color: var(--color-text);
     margin-right: 20px;
     font-size: 22px;
+}
+section.btn-links {  /* BTN longos */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 button:active {  /* Animação dos btn */
@@ -286,8 +289,8 @@ footer p {
         font-size: 15px;
     }
 
-    footer {
-        background-color: var(--color-dark);
+    button {
+        width: 90%;
     }
     
     .footer-container {
@@ -303,6 +306,6 @@ footer p {
     }
     
     .arthursant{
-        font-size: 145%;
+        font-size: 150%;
     }
 }
