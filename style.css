@@ -19,7 +19,6 @@ html {
     --color-design: #b9b9b9;
 }
 
-
 header {
     display: flex;
     justify-content: space-around;
@@ -32,6 +31,11 @@ header {
     z-index: 100;
 }
 
+.logo {
+    font-size: 160%;
+    margin-left: 0;
+}
+
 header a {
     display: inline;
     font-size: 120%;
@@ -41,13 +45,7 @@ header a {
     text-shadow: rgba(0, 0, 0, 0) 0.1em 0.1em 0.2em;
 }
 
-.logo {
-    font-size: 160%;
-    margin-left: 0;
-}
-
-
-.wrapper {
+.all{
     width: 100%;
     margin: 0 auto;
 }
@@ -68,34 +66,17 @@ main {  /* Testo que fica acima das imagens */
 section.module.content {
     display: flex;
     justify-content: center;
-}
-
-
-
-section.module h1 {
-    margin-bottom: 0;
-    font-weight: 5%;
-    z-index: 1;
+    margin: 0 auto;
+    padding: 6% 0;
+    background: var(--color-light);
 }
 
 section.module:last-child {  /* Atinge somente o último objeto */
     margin-bottom: 0;
 }
 
-section.module.parallax h1 {  /* Titulo */
-    color: var(--color-white);
-    text-shadow: black 0.1em 0.1em 0.2em;
-    text-align: center;
-    font-size: 70px;
-    text-transform: uppercase;
-    z-index: 50;
-}
-
-section.module.content h2{
-    text-align: center;
-}
-
 section.module h2 {
+    text-align: center;
     margin-bottom: 5%;
     font-weight: 5%;
     font-size: 30px;
@@ -107,9 +88,13 @@ section.module p {
     font-size: 15px;
 }
 
-section.module.content {  /* Onde fica o texto */
-    padding: 6% 0;
-    background: var(--color-light);
+section.module.parallax h1 {  /* Titulo */
+    color: var(--color-white);
+    text-shadow: black 0.1em 0.1em 0.2em;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    z-index: 50;
 }
 
 section.module.parallax {  /* Img que fica fixa */
@@ -138,7 +123,7 @@ section.module.parallax:after {
 }
 
 section.module.parallax-1 {  /* Link para imagem d fundo */
-    background-image: url("https://images.unsplash.com/photo-1526718583451-e88ebf774771?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1620064854775-93e5394ecdd5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 section.module.parallax-2 {
@@ -202,13 +187,13 @@ footer {
 
 .footer-container {
     width: 100%;
-    padding: 2% 0% 1% 0%;
+    padding: 1% 0% 1% 0%;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 2%;
+    gap: 1%;
 }
 
 .social-icons a {
@@ -268,6 +253,20 @@ footer p {
         max-width: 100%;
         text-align: left;
     }
+    
+    section.module.parallax {   /* Img que fica fixa */
+        height: 50vh !important;    /* Forçar a ter 100vh de acordo com o tamanho da tela */
+    }
+
+    section.module.parallax:after {
+        width: 0%;
+        height: 0%;
+    }
+    
+    section.module.parallax {  /* Img que fica fixa */
+        background-attachment: local !important;
+    } 
+
 
     section.module.parallax h1 {  /* Titulo */
         font-size: 60px;
@@ -283,19 +282,6 @@ footer p {
         font-size: 15px;
     }
 
-    section.module.parallax {   /* Img que fica fixa */
-        height: 50vh !important;    /* Forçar a ter 100vh de acordo com o tamanho da tela */
-    }
-
-    section.module.parallax:after {
-        width: 0%;
-        height: 0%;
-    }
-    
-    section.module.parallax {  /* Img que fica fixa */
-        background-attachment: local !important;
-    } 
-
     footer {
         background-color: var(--color-dark);
     }
@@ -305,11 +291,11 @@ footer p {
     }
     
     .social-icons a {
-        font-size: 2em;
+        font-size: 1.7em;
     }
     
     footer p {
-        font-size: 35%;
+        font-size: 45%;
     }
     
     .arthursant{
