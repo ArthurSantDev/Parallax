@@ -213,18 +213,18 @@ footer {
 
 /*;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;*/
 
-footer p {
+footer p { 
+    font-size: 7px;  
+    color: #c7c7c7;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-light);
-    font-size: 55%;
 }
 
-.arthursant{
-    margin: 0 0.5%;
-    font-size: 150%;
-    color: var(--color-light);
+.arthursant{  
+    font-size: 8.5px;
+    color: #ffffff;
+    margin: 0 0.3%;
     text-decoration: none;
     font-family: none;
     cursor: pointer;
@@ -302,12 +302,12 @@ footer p {
     }
     
     footer p {
-        color: #c7c7c7;
+        color: #d8d8d8;
         font-size: 7px;
     }
     
     .arthursant{
         color: #ffffff;
-        font-size: 7px;
+        font-size: 8.5px;
     }
 }
