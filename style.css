@@ -302,12 +302,13 @@ footer p {
     }
     
     footer p {
-        color: #d8d8d8;
         font-size: 7px;
+        color: #d8d8d8;
     }
     
-    .arthursant{
-        color: #ffffff;
+    .arthursant{ 
         font-size: 8.5px;
+        color: #ffffff;
+        margin: 0 0.5%;
     }
 }
