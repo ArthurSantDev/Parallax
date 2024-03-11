@@ -63,7 +63,7 @@ main {  /* Testo que fica acima das imagens */
     padding: 0;
 }
 
-section.text-content { /* fundo e conteúdo */
+.text-content { /* fundo e conteúdo */
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -71,7 +71,7 @@ section.text-content { /* fundo e conteúdo */
     background: var(--color-light);
 }
 
-section.text-content h2 {
+.text-content h2 {
     text-align: center;
     margin-bottom: 5%;
     font-weight: 5%;
@@ -79,16 +79,16 @@ section.text-content h2 {
     z-index: 1;
 }
 
-section.text-content p {
+.text-content p {
     margin-bottom: 5%;
-    font-size: 15px;
+    font-size: 16.5px;
 }
 
-section.text-content:last-child {  /* Fondo onde o texto fica */
+.text-content:last-child {  /* Fondo onde o texto fica */
     margin-bottom: 0;
 }
 
-section.module.parallax h1 {  /* Titulo */
+section.parallax h1 {  /* Titulo */
     color: var(--color-white);
     text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
@@ -97,7 +97,7 @@ section.module.parallax h1 {  /* Titulo */
     z-index: 50;
 }
 
-section.module.parallax {  /* Img que fica fixa */
+section.parallax {  /* Img que fica fixa */
     background-attachment: fixed !important;  /* Quem de fato ativa o parallax */
     display: flex;
     flex-direction: column;
@@ -112,7 +112,7 @@ section.module.parallax {  /* Img que fica fixa */
     -webkit-background-size: cover;
 }
 
-section.module.parallax:after {
+section.parallax:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -123,19 +123,19 @@ section.module.parallax:after {
 }
 
 /* Link para imagem d fundo */
-section.module.parallax-1 {  
+section.parallax-1 {  
     background-image: url("https://images.unsplash.com/photo-1620064854775-93e5394ecdd5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
-section.module.parallax-2 {
+section.parallax-2 {
 background-image: url("https://images.unsplash.com/photo-1587996597484-04743eeb56b4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
-section.module.parallax-3 {
+section.parallax-3 {
 background-image: url("https://images.unsplash.com/photo-1592967547589-e94f6cd77af9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
   
-section.module.parallax-4 {
+section.parallax-4 {
 background-image: url("https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1452&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
@@ -238,21 +238,21 @@ footer p {
         display: flex;
         justify-content: space-around;
         gap: 0%;
-        font-size: 90%;
+        height: 6.5vh;
     }
 
     header a, 
     .logo{
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     header a {
-        font-size: 120%;
+        font-size: 90%;
     }
     
     .logo {
-        font-size: 180%;
+        font-size: 160%;
     }
 
     .container {
@@ -261,30 +261,30 @@ footer p {
         text-align: left;
     }
     
-    section.module.parallax {   /* Img que fica fixa */
+    section.parallax {   /* Img que fica fixa */
         height: 50vh !important;    /* Forçar a ter 100vh de acordo com o tamanho da tela */
     }
 
-    section.module.parallax:after {
+    section.parallax:after {
         width: 0%;
         height: 0%;
     }
     
-    section.module.parallax {  /* Img que fica fixa */
+    section.parallax {  /* Img que fica fixa */
         background-attachment: local !important;
     } 
 
 
-    section.module.parallax h1 {  /* Titulo */
+    .parallax h1 {  /* Titulo */
         font-size: 60px;
         z-index: 50;
     }
     
-    section.module h2 {
+    .text-content h2 {
         font-size: 30px;
     }
     
-    section.module p {
+    .text-content p {
         margin-bottom: 5%;
         font-size: 15px;
     }
@@ -298,11 +298,11 @@ footer p {
     }
     
     .social-icons a {
-        font-size: 1.7em;
+        font-size: 1.8em;
     }
     
     footer p {
-        font-size: 45%;
+        font-size: 35%;
     }
     
     .arthursant{
