@@ -145,6 +145,10 @@ a {     /* Custum links */
     text-decoration: none;
 }
 
+button {
+    background-color: white;
+}
+
 section.btn-links {  /* BTN longos */
     display: flex;
     flex-direction: column;
@@ -299,6 +303,6 @@ footer p {
     }
     
     .arthursant{
-        font-size: 130%;
+        font-size: 145%;
     }
 }
