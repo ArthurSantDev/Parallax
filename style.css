@@ -56,22 +56,29 @@ main {  /* Testo que fica acima das imagens */
     user-select: none;
 }
 
-.container {  /* text */
-    width: 100%;
-    max-width: 50%;
-    margin: 0;
-    padding: 0;
-}
-
-.text-content { /* fundo e conteúdo */
+.content { /* fundo e conteúdo */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin: 0 auto;
     padding: 6% 0;
     background: var(--color-light);
 }
 
-.text-content h2 {
+.container-img img{  /* text */
+    width: 70%;
+    margin: 5% 40%;
+    padding: 0;
+}
+
+
+.container-text {  /* text */
+    width: 100%;
+    max-width: 50%;
+    margin: 0 11%;
+    padding: 0;
+}
+
+.content h2 {
     text-align: center;
     margin-bottom: 5%;
     font-weight: 5%;
@@ -79,16 +86,16 @@ main {  /* Testo que fica acima das imagens */
     z-index: 1;
 }
 
-.text-content p {
+.content p {
     margin-bottom: 5%;
     font-size: 16.5px;
 }
 
-.text-content:last-child {  /* Fondo onde o texto fica */
+.content:last-child {  /* Fondo onde o texto fica */
     margin-bottom: 0;
 }
 
-section.parallax h1 {  /* Titulo */
+.parallax h1 {  /* Titulo */
     color: var(--color-white);
     text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
@@ -97,7 +104,7 @@ section.parallax h1 {  /* Titulo */
     z-index: 50;
 }
 
-section.parallax {  /* Img que fica fixa */
+.parallax {  /* Img que fica fixa */
     background-attachment: fixed !important;  /* Quem de fato ativa o parallax */
     display: flex;
     flex-direction: column;
@@ -112,7 +119,7 @@ section.parallax {  /* Img que fica fixa */
     -webkit-background-size: cover;
 }
 
-section.parallax:after {
+.parallax:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -182,8 +189,8 @@ section.btn-links {  /* BTN longos */
 }
 
 button:active {  /* Animação dos btn */
-    transform: scale(1.04);
-    transition: 0.1s;
+    transform: scale(1.07);
+    transition: 0.1s ease-in-out;
 }
 
 /* BTN STYLE /////////////////////////////////////////////*/
@@ -253,24 +260,28 @@ footer p {
     
     .logo {
         font-size: 160%;
+    }   
+
+    .container-img  {
+        display: none;
     }
 
-    .container {
+    .container-text {
         width: 90%;
         max-width: 100%;
         text-align: left;
     }
     
-    section.parallax {   /* Img que fica fixa */
+    .parallax {   /* Img que fica fixa */
         height: 50vh !important;    /* Forçar a ter 100vh de acordo com o tamanho da tela */
     }
 
-    section.parallax:after {
+    .parallax:after {
         width: 0%;
         height: 0%;
     }
     
-    section.parallax {  /* Img que fica fixa */
+    .parallax {  /* Img que fica fixa */
         background-attachment: local !important;
     } 
 
@@ -280,11 +291,11 @@ footer p {
         z-index: 50;
     }
     
-    .text-content h2 {
+    .content h2 {
         font-size: 30px;
     }
     
-    .text-content p {
+    .content p {
         margin-bottom: 5%;
         font-size: 15px;
     }
