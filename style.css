@@ -267,10 +267,9 @@ footer p {
     }
 
     .container-img img{  /* text */
-        display: flex;
+        display: none;
         justify-content: center;
         width: 20%;
-        padding: 0;
     }
 
     .container-text {
