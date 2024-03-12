@@ -13,7 +13,6 @@ html {
 :root {
     --color-dark: #242424;    
     --color-light: #dfdfdf;
-    --color-white: #fff;
     --color-text: #000000;
     --color-text-2: #ffffff;
     --color-design: #b9b9b9;
@@ -41,7 +40,7 @@ header a {
     font-size: 120%;
     margin-left: 20px;
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-light);
     text-shadow: rgba(0, 0, 0, 0) 0.1em 0.1em 0.2em;
 }
 
@@ -50,9 +49,9 @@ header a {
     margin: 0 auto;
 }
 
-main {  /* Testo que fica acima das imagens */
+main {  /* Todo conteúdo do site */
     display: block;
-    background-color: var(--color-white);
+    background-color: var(--color-light);
     user-select: none;
 }
 
@@ -96,7 +95,7 @@ main {  /* Testo que fica acima das imagens */
 }
 
 .parallax h1 {  /* Titulo */
-    color: var(--color-white);
+    color: white;
     text-shadow: black 0.1em 0.1em 0.2em;
     text-align: center;
     font-size: 70px;
