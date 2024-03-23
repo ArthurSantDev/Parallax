@@ -17,16 +17,18 @@
 <main>
     <section id="1">
 
-        <header>
-             <div>
-                <a class="logo" href="#1">Arthur Sant</a>
-             </div>
-
-             <nav>
-                <a href="#2">ACTION</a>
-                <a href="#3">SHOUNEN</a>
-                <a href="#5">KODOMO</a>
-             </nav>
+        <header id="header">
+            <a id="logo" href="#1">Arthur Sant</a>
+                <nav id="nav">
+                    <button id="mobile-button" aria-expanded="false" aria-haspopup="true" aria-controls="menu">
+                        <span id="icon-button"></span>
+                    </button>
+                    <ul id="menu">
+                        <li><a href="#2">ACTION</a></li>
+                        <li><a href="#3">SHOUNEN</a></li>
+                        <li><a href="#5">KODOMO</a></li>
+                    </ul>
+                </nav>
         </header>
 
         <section class="parallax parallax-1">
@@ -190,5 +192,6 @@
         </div>
     </footer>
 </main>
+<script src="assets/js/index.js"></script>
 </body>
 </html>
